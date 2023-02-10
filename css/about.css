@@ -1,0 +1,284 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    background: #151622;
+}
+
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    outline: 0;
+    border: 0;
+}
+
+:root {
+    /* font */
+    --ptff: 'Inter', sans-serif;
+    --stff: 'Chivo', sans-serif;
+    --hff: 'Prosto One', cursive;
+
+    /* font size */
+    --xxlfs: 9rem;
+    --xlfs: 4.7rem;
+    --lfs: 4rem;
+    --mfs: 3rem;
+    --sfs: 2.4rem;
+    --xsfs: 1.5rem;
+
+    /* font weight */
+    --sfw: 400;
+    --lfw: 700;
+    --xlfw: 900;
+
+    /* colors */
+    --hc: #159DFF;
+    --pc: #918080;
+    --ac: #B51D08;
+    --fbgc: #383942;
+}
+
+main {
+    width: 90%;
+    margin-inline: auto;
+}
+
+footer {
+    width: 100%;
+}
+
+.logo {
+    max-width: 10em;
+    min-height: 4em;
+    margin-top: 1em;
+    margin-right: 77em;
+    margin-left: 2.4em;
+}
+
+.heading {
+    font-family: var(--hff);
+    font-weight: var(--sfw);
+    font-size: 2rem;
+    text-align: center;
+    color: var(--ac);
+    margin-bottom: 1em;
+}
+
+.text {
+    font-family: var(--ptff);
+    font-weight: var(--lfw);
+    font-size: 1rem;
+    color: var(--pc);
+    padding-bottom: 1em;
+}
+
+.grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    margin: 3em;
+    
+    
+    
+}
+
+.form-heading {
+    font-family: var(--hff);
+    font-weight: var(--sfw);
+    font-size: var(--lfs);
+    color: var(--hc);
+    margin: 1em 0;
+}
+
+form {
+    background-color: var(--fbgc);
+    padding: 3em 4em;
+}
+
+.form_sub-heading {
+    font-family: var(--ptff);
+    font-weight: var(--lfw);
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-family: var(--ptff);
+    font-weight: var(--lfw);
+    font-size: 1rem;
+    margin: 0.7em 0;
+    color: white;
+}
+
+.name-box,
+.email-box,
+.phone-box {
+    width: 100%;
+    height: 2.7em;
+    border-radius: 0.2rem;
+    padding: 0.2em 1em;
+}
+
+.big-cover {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.cover {
+    width: 47.5%;
+}
+
+.box {
+    width: 47.5%;
+    background-color: white;
+    color: white;
+} 
+
+.form-text {
+    font-family: var(--ptff);
+    font-weight: var(--lfw);
+    font-size: 1rem;
+    color: white;
+    margin: 1em 0;
+}
+
+.form-flex {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+}
+
+.form-btn {
+    font-family: var(--ptff);
+    font-weight: var(--lfw);
+    width: 8em;
+    background-color: white;
+    color: var(--hc);
+    padding: 0.5em 1em;
+    border-radius: 0.4em;
+    margin-bottom: 2em;
+    transition: all 300ms ease-in-out;
+    
+}
+
+.form-btn:hover {
+    background-color: var(--hc);
+    color: white;
+    transform: scale(1.1);
+}
+
+.form-btn1 {
+    font-family: var(--ptff);
+    font-weight: var(--lfw);
+    width: 14em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: var(--ac);
+    margin: 0 auto;
+    padding: 0.5em 1em;
+    border-radius: 0.4em;
+    transition: transform 200ms ease-in-out;
+}
+
+.form-btn1:hover {
+    background-color: var(--ac);
+    color: white;
+    transform: scale(1.1);
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--fbgc);
+    margin-top: 10em;
+    padding: 3em 2em;
+}
+
+.logo1 {
+    width: 12em;
+}
+
+.footer-text {
+    width: 100%;
+    color: var(--ac);
+}
+
+
+@media (min-width: 900px) {
+
+    main {
+        width: 80%;
+        margin-inline: auto;
+    }
+
+    .heading {
+        font-size: var(--mfs);
+    }
+
+    .text {
+        font-size: 1.2rem;
+    }
+     
+    form {
+        margin-left: 7em;
+        margin-right: 7em;  
+    }
+
+    .form-heading {
+        font-size: var(--xlfs);
+    }
+
+    .form-flex {
+        gap: 3em;
+    }
+
+    .form-btn {
+        font-size: 1.2rem;
+        width: 13em;
+    }
+
+    .form-btn1 {
+        font-size: 1.2rem;
+
+        margin-top: 1.5em;
+        width: 15em;
+    }
+
+    .name-box,
+    .email-box,
+    .phone-box {
+        height: 3em;
+    }
+
+    .logo1 {
+        width: 20em;
+    }
+
+    .footer-text {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+    }
+
+
+}
+
+

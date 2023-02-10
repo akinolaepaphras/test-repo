@@ -1,37 +1,32 @@
-
-
-const top = document.getElementById("top")
+// const top = document.getElementById("top")
 const carousels = document.querySelectorAll(".carousel")
-const btn1 = document.getElementById("btn1")
-const btn2 = document.getElementById("btn2")
-const btn3 = document.getElementById("btn3")
+const btns = document.querySelectorAll(".top-btn")
+const imgs = ["constr 2.png", "aquarium.jpg", "concrete.jpg"]
+const carouselDiv = document.getElementById("carousels")
 
-let activeSlide = 0
 
-btn1.addEventListener("click", () => {
-    activeSlide = 0
 
-    setActiveSlide()
-} )
 
-btn2.addEventListener("click", () => {
-    activeSlide = 1
+btns.forEach(btn => {
+    let btnId = btn.id
+    btn.addEventListener("click", () => {
+        let index = btnId.charAt(btnId.length-1)
+        setActiveSlide(index-1) 
+    })
+})
 
-    setActiveSlide()
-} )
 
-btn3.addEventListener("click", () => {
-    activeSlide = 2
-
-    setActiveSlide()
-} )
-
-function setActiveSlide() {
+function setActiveSlide(activeSlide) {
     carousels.forEach(carousel => {
         carousel.classList.remove("active")
     })
-
     carousels[activeSlide].classList.add("active")
+
+    const bgStyle = `
+        url('../img/${imgs[activeSlide]}') no-repeat center center fixed 
+    `
+    carouselDiv.style.background = bgStyle
+    carouselDiv.style.backgroundSize = "cover"
 }
 
 // let idx = 0
