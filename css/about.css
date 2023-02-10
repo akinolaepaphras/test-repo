@@ -62,8 +62,8 @@ footer {
 }
 
 .logo {
-    max-width: 10em;
-    min-height: 4em;
+    max-width: 15em;
+    min-height: 7em;
     margin-top: 1em;
     margin-right: 77em;
     margin-left: 2.4em;
@@ -76,6 +76,7 @@ footer {
     text-align: center;
     color: var(--ac);
     margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 .text {
@@ -113,8 +114,10 @@ form {
 .form_sub-heading {
     font-family: var(--ptff);
     font-weight: var(--lfw);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-align: left;
+    margin-bottom: 1em;
+    color: #159DFF;
 }
 
 label {
@@ -124,6 +127,11 @@ label {
     font-size: 1rem;
     margin: 0.7em 0;
     color: white;
+}
+
+input {
+    border: 0;
+    outline: #159DFF;
 }
 
 .name-box,
@@ -145,12 +153,13 @@ label {
     width: 47.5%;
 }
 
-.box {
+#box {
     width: 47.5%;
     background-color: white;
-    color: white;
+    color: black;
+    border-radius: 0.2rem;
+    padding: 0.1em 1em;
 } 
-
 .form-text {
     font-family: var(--ptff);
     font-weight: var(--lfw);

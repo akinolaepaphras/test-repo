@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
 html {
     font-size: 10px;
@@ -168,8 +172,9 @@ ul {
     font-family: var(--stff);
     font-weight: var(--xlfw);
     list-style: square;
-    margin-left: 0.75em;
+    padding: 0;
     color: var(--ac);
+    text-align: left;
 }
 
 ul::after {
@@ -273,6 +278,7 @@ ul::after {
     font-weight: var(--sfw);
     font-size: var(--lfs);
     color: var(--pc);
+    margin-bottom: 0.7em;
 }
 
 form {
@@ -283,8 +289,9 @@ form {
 .form_sub-heading {
     font-family: var(--ptff);
     font-weight: var(--lfw);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-align: left;
+    margin-bottom: 1em;
 }
 
 label {
@@ -292,7 +299,7 @@ label {
     font-family: var(--ptff);
     font-weight: var(--lfw);
     font-size: 1rem;
-    margin: 0.7em 0;
+    margin: 0.9em 0;
     color: white;
 }
 
@@ -305,9 +312,9 @@ input {
 .email-box,
 .phone-box {
     width: 100%;
-    height: 2.7em;
+    height: 2.5em;
     border-radius: 0.2rem;
-    padding: 0.2em 1em;
+    padding: 0.4em 1em;
 }
 
 .big-cover {
@@ -323,7 +330,9 @@ input {
 #box {
     width: 47.5%;
     background-color: white;
-    color: white;
+    color: black;
+    border-radius: 0.2rem;
+    padding: 0.2em 1em;
 } 
 
 .form-text {
@@ -454,13 +463,18 @@ footer {
     }
 
     .form-btn {
+        font-size: 1.5rem;
+        padding-top: 0.8em;
+        padding-bottom: 0.8em;
         font-size: 1.2rem;
         width: 13em;
+
     }
 
     .form-btn1 {
-        font-size: 1.2rem;
-
+        font-size: 1.5rem;
+        padding-top: 0.8em;
+        padding-bottom: 0.8em;
         margin-top: 1.5em;
         width: 15em;
     }
