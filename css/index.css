@@ -249,7 +249,7 @@ ul::after {
     outline: none;
     border: none;
     border-radius: 0.5em;
-    padding: 1em 1em;
+    padding: 0.7em 0.7em;
     transition: all 300ms ease-in-out;
 }
 
