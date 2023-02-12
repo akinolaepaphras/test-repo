@@ -126,7 +126,6 @@ footer {
     margin-bottom: 6em;
 }
 .top-btn {
-    display: flex;
     margin-right: 2.5rem;
     border-radius: 100%;
     outline: 0;
@@ -136,11 +135,13 @@ footer {
     height: 0.8em;
 }
 
-.top-btn:focus {
-        outline: 1px solid white;
+.top-btn.active {
+    background-color: var(--hc);
+    outline: 1px solid white;
         outline-offset: 3px;
-    
 }
+
+
 .about-heading {
     margin-top: 2em;
 }

@@ -4,16 +4,35 @@ const btns = document.querySelectorAll(".top-btn")
 const imgs = ["constr 2.png", "aquarium.jpg", "concrete.jpg"]
 const carouselDiv = document.getElementById("carousels")
 
+let index = 0
 
+let interval = setInterval(run, 2000)
 
 
 btns.forEach(btn => {
+
     let btnId = btn.id
     btn.addEventListener("click", () => {
-        let index = btnId.charAt(btnId.length-1)
-        setActiveSlide(index-1) 
+        clearInterval(interval)
+        removeActiveBtn()
+        btn.classList.add("active")
+
+        index = btnId.charAt(btnId.length - 1)
+        setActiveSlide(index - 1) 
+        // resetInterval()
     })
 })
+
+// function resetInterval() {
+//     clearInterval(interval)
+//     interval = setInterval(run, 2000)
+// }
+
+function removeActiveBtn() {
+    btns.forEach(btn => {
+        btn.classList.remove("active")   
+    })
+}
 
 
 function setActiveSlide(activeSlide) {
@@ -29,15 +48,15 @@ function setActiveSlide(activeSlide) {
     carouselDiv.style.backgroundSize = "cover"
 }
 
-// let idx = 0
 
-// let interval = setInterval(run, 2000)
+function run() {
+    index++
+    if(index > carousels.length - 1) {
+        index = 0
+    }
 
-// function run() {
-//     idx++
-//     changeText()
-// }
+    removeActiveBtn()
+    btns[index].classList.add("active")
+    setActiveSlide(index)
+}
 
-// function changeText() {
-    
-// }
