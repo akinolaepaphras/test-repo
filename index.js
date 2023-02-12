@@ -6,7 +6,7 @@ const carouselDiv = document.getElementById("carousels")
 
 let index = 0
 
-let interval = setInterval(run, 2000)
+let interval = setInterval(run, 3000)
 
 
 btns.forEach(btn => {

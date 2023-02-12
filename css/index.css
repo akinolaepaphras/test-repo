@@ -67,7 +67,7 @@ footer {
 
 .logo {
     max-width: 10em;
-    min-height: 4em;
+    min-height: 5em;
     margin-top: 1em;
     margin-right: 77em;
     margin-left: 2.4em;
@@ -95,10 +95,13 @@ footer {
 
 .carousel {
     display: none;
+    opacity: 0;
 }
 
 .carousel.active {
     display: block;
+    opacity: 1;
+    transition: opacity 200ms ease-in-out;
 }
 
 
@@ -136,9 +139,10 @@ footer {
 }
 
 .top-btn.active {
-    background-color: var(--hc);
+    transition: background 200ms ease-in-out;
+    background: var(--hc);
     outline: 1px solid white;
-        outline-offset: 3px;
+    outline-offset: 3px;
 }
 
 
