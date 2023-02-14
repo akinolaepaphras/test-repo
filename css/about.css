@@ -96,9 +96,9 @@ footer {
 .grid {
     display: grid;
     column-gap: 1.25%;
-    
+    margin-top: 3em;
     grid-template-columns: repeat(2, 1fr);
-    margin: 3em;     
+         
 }
 
 .price-grid {
@@ -127,6 +127,7 @@ picture {
 
  
 @media (min-width: 900px) {
+
     .price {
         opacity: 0;
         font-family:var(--ptff) ;
@@ -191,10 +192,8 @@ picture {
     font-family: var(--hff);
     font-weight: var(--sfw);
     font-size: var(--lfs);
-    color: var(--hc);
-    margin-top: 1em;
-    margin-bottom: 0;
-    margin-bottom: 0.4em;
+    color: var(--pc);
+    margin-bottom: 0.7em;
 }
 
 form {
@@ -205,10 +204,10 @@ form {
 .form_sub-heading {
     font-family: var(--ptff);
     font-weight: var(--lfw);
+    color: var(--hc);
     font-size: 1.4rem;
     text-align: left;
     margin-bottom: 1em;
-    color: #159DFF;
 }
 
 label {
@@ -216,7 +215,7 @@ label {
     font-family: var(--ptff);
     font-weight: var(--lfw);
     font-size: 1rem;
-    margin: 0.7em 0;
+    margin: 0.9em 0;
     color: white;
 }
 
@@ -236,67 +235,55 @@ input:focus{
     width: 100%;
     height: 2.7em;
     border-radius: 0.2rem;
-    padding: 0.2em 1em;
+    padding: 0.4em 1em;
 }
 
 .big-cover {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     width: 100%;
 }
 
 .cover {
-    width: 47.5%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.message {
+    margin-top: 1.5em;
 }
 
 #box {
-    width: 47.5%;
-    min-height: 100%;
+    width: 100%;
+    min-height: 10rem;
     background-color: white;
     color: black;
     border-radius: 0.2rem;
     padding: 1em; 
     outline: 0;
-
+    margin-bottom: 1.2em;
 } 
+
+
 
 #box:focus {
     outline: 0.2rem solid #151622;
     outline-offset: -0.5rem;     /* oranges! yey */
 }
 
-.form-text {
-    font-family: var(--ptff);
-    font-weight: var(--lfw);
-    font-size: 1rem;
-    color: white;
-    margin: 1em 0;
-}
-
 .form-flex {
-    display: flex;
-    gap: 2em;
-    justify-content: center;
+    display: none;
 }
 
 .form-btn {
-    font-family: var(--ptff);
-    font-weight: var(--lfw);
-    width: 8em;
-    background-color: white;
-    color: var(--hc);
-    padding: 0.5em 1em;
-    border-radius: 0.4em;
-    margin-bottom: 2em;
-    transition: all 300ms ease-in-out;
-    
+    display: none;
 }
 
-.form-btn:hover {
-    background-color: var(--hc);
-    color: white;
-    transform: scale(1.1);
+.form-text {
+    display: none;
 }
+
 
 .form-btn1 {
     font-family: var(--ptff);
@@ -305,17 +292,18 @@ input:focus{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
-    color: var(--ac);
+    background-color: var(--hc);
+    color: white;
+    cursor: pointer;
     margin: 0 auto;
-    padding: 0.5em 1em;
+    padding: 0.7em 1em;
     border-radius: 0.4em;
     transition: transform 200ms ease-in-out;
 }
 
 .form-btn1:hover {
-    background-color: var(--ac);
-    color: white;
+    background-color: white;
+    color: var(--hc);
     transform: scale(1.1);
 }
 
@@ -336,8 +324,7 @@ footer {
     color: var(--ac);
 }
 
-
-@media (min-width: 900px) {
+ @media (min-width: 800px) {
 
     main {
         width: 80%;
@@ -347,10 +334,53 @@ footer {
     .heading {
         font-size: var(--mfs);
     }
+    
+    .sub-heading {
+        font-size: var(--mfs);
+    }
+
+    .grid {
+        margin-left: 6em;
+        margin-right: 6em;
+    }
 
     .text {
         font-size: 1.2rem;
     }
+
+    /* .name {
+        margin-left: ;
+    } */
+    
+    .big-cover {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2em;
+    }
+
+    .cover {
+        height: 100%;
+        align-self: center;
+        justify-self: start;
+    }
+    
+    .cover2 {
+        margin-top: 0;
+        min-width: 100%;
+    }
+
+    .message {
+        display: none;
+        
+    }
+    
+    #box {
+        width: 100%;
+        height: 100%;
+        outline: none;
+        margin: 0;
+    
+    } 
      
     form {
         margin-left: 7em;
@@ -361,18 +391,67 @@ footer {
         font-size: var(--xlfs);
     }
 
+    .form_sub-heading {
+        font-size: 2.2rem;
+    }
+
     .form-flex {
+        display: flex;
+        justify-content: center;
         gap: 3em;
     }
 
     .form-btn {
+        display: block;
+        font-family: var(--ptff);
+        font-weight: var(--lfw);
+        background-color: white;
+        color: var(--ac);
+        cursor: pointer;
+        padding-top: 0.8em;
+        padding-bottom: 0.8em;
         font-size: 1.2rem;
         width: 13em;
+        border-radius: 0.4em;
+        margin-bottom: 2em;
+        transition: all 300ms ease-in-out;
+
     }
 
-    .form-btn1 {
-        font-size: 1.2rem;
+    .form-text {
+        display: block;
+        font-family: var(--ptff);
+        font-weight: var(--lfw);
+        font-size: 1rem;
+        color: white;
+        margin: 1em 0;
+    }
+    
+    
+    /* .form-btn {
+        font-family: var(--ptff);
+        font-weight: var(--lfw);
+        width: 8em;
+        background-color: white;
+        color: var(--ac);
+        padding: 0.5em 1em;
+        border-radius: 0.4em;
+        margin-bottom: 2em;
+        transition: all 300ms ease-in-out;
+        
+    }
+     */
+    .form-btn:hover {
+        background-color: var(--ac);
+        color: white;
+        transform: scale(1.1);
+    }
+    
 
+    .form-btn1 {
+        font-size: 1.5rem;
+        padding-top: 0.8em;
+        padding-bottom: 0.8em;
         margin-top: 1.5em;
         width: 15em;
     }
@@ -393,6 +472,12 @@ footer {
     }
 
 
+} 
+
+@media (max-width: 400px) {
+    .form-btn1 {
+        width: 10em;
+    }
 }
 
 
