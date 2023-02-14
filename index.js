@@ -1,7 +1,7 @@
 // const top = document.getElementById("top")
 const carousels = document.querySelectorAll(".carousel")
 const btns = document.querySelectorAll(".top-btn")
-const imgs = ["constr 2.png", "aquarium.jpg", "concrete.jpg"]
+const imgs = ["constr 2.png", "bg-img.jpg", "concrete.jpg"]
 const carouselDiv = document.getElementById("carousels")
 
 let index = 0

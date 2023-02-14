@@ -7,11 +7,15 @@
         <title>Document</title>
         <link rel="stylesheet" href="/css/about.css">
     <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@900&family=Inter:wght@700&family=Prosto+One&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
     </head>
 
     <body>
         <header>
-            <img src="/img/XPL LOGO 3.png" alt="" class="logo">
+            <img src="/img/XPL LOGO 3.png" alt="" class="logo animate__animated animate__bounceInRight animate__delay-1s">
         </header>
 
         <main>
@@ -39,29 +43,56 @@
 
                 <div class="grid main1-grid">
                     <div class="price-grid">
-                        <img class="grid-img" src="/img/Rectangle 7a.png" alt="">
+                        <picture class="picture">
+                            <source
+                              media="(min-width: 62.5em)"
+                              srcset="/img/Rectangle 7a.png"
+                            />
+                            <img class="grid-img" src="/img/Rectangle 7a.png" alt="">
+                          </picture>
                         <p class="price">70,000</p>
                     </div>
 
                     <div class="price-grid">
-                        <img class="grid-img" src="/img/Rectangle 8.png" alt="">
+                        <picture class="picture">
+                            <source
+                              media="(min-width: 62.5em)"
+                              srcset="/img/Rectangle 8.png"
+                            />
+                            <img class="grid-img" src="/img/Rectangle 8.png" alt="">
+                          </picture>
+                        
                         <p class="price">70,000</p>
                     </div>
 
                     <div class="price-grid">
-                        <img class="grid-img" src="/img/Rectangle 9.png" alt="">
+                        <picture class="picture">
+                            <source
+                              media="(min-width: 62.5em)"
+                              srcset="/img/Rectangle 9.png"
+                            />
+                            <img class="grid-img" src="/img/Rectangle 9.png" alt="">
+                          </picture>
+                        
                         <p class="price">170,000</p>
                     </div>
 
                     <div class="price-grid">
-                        <img class="grid-img" src="/img/Rectangle 10.png" alt="">
+                        <picture class="picture">
+                            <source
+                              media="(min-width: 62.5em)"
+                              srcset="/img/Rectangle 10.png"
+                            />
+                            <img class="grid-img" src="/img/Rectangle 10.png" alt="">
+                          </picture>
+                        
                         <p class="price">170,000</p>
                     </div>
 
             </section>
             
             <section class="form">
-                <div class="heading form-heading">Let’s discuss your next project</div>
+                <div class="heading form-heading">Let’s discuss</div>
                 
                 <form action="" method="post">
                     <div class="sub-heading form_sub-heading">Contact Form</div>
@@ -74,7 +105,7 @@
                             <label for="name" class="name">Phone</label>
                             <input type="number" class="phone-box">
                         </div>
-                        <input type="text" id="box">
+                            <textarea name="message" id="box" cols="30" rows="10"></textarea>
                     </div>
                     <div class="form-text">Prefered service type</div>
                     <div class="form-flex">
